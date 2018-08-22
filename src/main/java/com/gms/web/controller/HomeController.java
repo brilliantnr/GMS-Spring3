@@ -25,7 +25,7 @@ public class HomeController {
 		session.setAttribute("context", context);
 		//model.setAttribute("context", "");
 		
-		return "main";
+		return "public:common/content.tiles";
 	}
 	
 }
