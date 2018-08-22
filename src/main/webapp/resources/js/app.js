@@ -7,7 +7,7 @@
 
 //Ecma6버전 (객체리터럴)   (이전버전: IIFE패턴)
 var app = app || {}; //만약 app이 있으면 app쓰고 없으면 새로 만들어라, var는  전역
-app = {//안드로이드, 노드의 핵심 코딩
+app = {//안드로이드, 노드의 핵심 코딩  
 		init : x =>{
 			alert('step1');
 			app.session.context(x);  //세션에 제일 먼저 경로 저장
