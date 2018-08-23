@@ -9,8 +9,8 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="index.html">Home</a></li>
-			          <li><a id="login_btn" href="#">로그인</a></li>
-			          <li><a id="join_btn" href="#">회원가입</a></li>
+			          <li><a id="logout_btn" href="#">로그아웃</a></li>
+			          <li><a id="" href="#">뿅</a></li>
 			          <li><a href="portfolio.html">Portfolio</a></li>
 			          <li><a href="price.html">Pricing</a></li>
 			          <li class="menu-has-children"><a href="">Blog</a>

@@ -54,7 +54,7 @@
 			</table>
 			<input type="hidden" name="page" value="mypage" />
 		<input type="hidden" name="action" value="update"/>	
-		<input id="update_form_btn" type="button" value="회원정보 수정완료" /> 
+		<input id="update_submit" type="button" value="회원정보 수정완료" /> 
 	</form>
 </div>
 </div> <!-- content -->
@@ -89,7 +89,7 @@
 		
 	
 	
-		document.getElementById('update_form_btn').addEventListener('click',
+		document.getElementById('update_submit').addEventListener('click',
 				function() {
 					var form = document.getElementById('update_form');
 					alert('----update 확인 버튼 클릭----');

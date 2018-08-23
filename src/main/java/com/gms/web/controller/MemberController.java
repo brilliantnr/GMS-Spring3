@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member")
 public class MemberController {
 	@RequestMapping("/add")
-	public void add() {}
+	public String add() {
+		return "redirect:/";
+	}
 	@RequestMapping("/list")
 	public void list() {}
 	@RequestMapping("/search")
@@ -21,11 +23,13 @@ public class MemberController {
 	@RequestMapping("/remove")
 	public void remove() {}
 	@RequestMapping("/login")
-	public void login() {}
+	public String login() {
+		return "login_success";
+	}
 	@RequestMapping("/logout")
-	public void logout() {}
-	@RequestMapping("/move")
-	public void move() {}
+	public String logout() {
+		return "redirect:/";
+	}
 	@RequestMapping("/fileupload")
 	public void fileupload() {}
 	

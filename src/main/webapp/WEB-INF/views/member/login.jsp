@@ -5,14 +5,14 @@
 		<form id="login_form" > 
 			아이디		<br> <input id="user_id" type="text" name="id" /> <br/>
 			비밀번호 	<br> <input id="user_password" type="text" name="password" /> <br/> <br/>
-			<input id="login_form_btn" type="button" value="전송" /> 
+			<input id="login_submit" type="button" value="전송" /> 
 		</form>
 	</div>
 </div> <!-- content -->	
 <script>
 
 
-document.getElementById('login_form_btn').addEventListener('click',function(){
+document.getElementById('login_submit').addEventListener('click',function(){
 	var form = document.getElementById('login_form');
 	var x = service.nullChecker([ form.user_id.value, form.user_password.value ]);  
 	if(x.checker){

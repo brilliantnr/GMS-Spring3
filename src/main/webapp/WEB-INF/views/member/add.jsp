@@ -35,7 +35,7 @@
 			<input type="checkbox" name="subject" value="html" /> HTML
 			<input type="checkbox" name="subject" value="spring" /> Spring
 			<br />
-			<input id="join_form_btn" type="button" value="회원가입 " />  
+			<input id="join_submit" type="button" value="회원가입 " />  
 			<br /> 
 		</form>
 	</div>
