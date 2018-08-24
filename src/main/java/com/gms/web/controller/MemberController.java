@@ -1,11 +1,15 @@
 package com.gms.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gms.web.domain.MemberDTO;
 
 @Controller
 @RequestMapping("/member")
 public class MemberController {
+	@Autowired MemberDTO member;
 	@RequestMapping("/add")
 	public String add() {
 		return "redirect:/";
@@ -24,6 +28,7 @@ public class MemberController {
 	public void remove() {}
 	@RequestMapping("/login")
 	public String login() {
+		
 		return "login_success";
 	}
 	@RequestMapping("/logout")

@@ -15,9 +15,11 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 	
-	<mvc:annotation-driven />
+	<mvc:annotation-driven /><!-- 리턴타입:bean -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- 내부에 어노테이션으로 bean 객체 만들때는 <mvc>로 만든다 -->
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	<!-- 외부 라이브러리에서 가져와서 bean 객체를 만들때는 <bean>으로 만든다  -->
 		<property name="viewResolvers">
 			<list>
 				<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -38,5 +40,7 @@
 		</list>
 	</property>
 </bean>
-	<context:component-scan base-package="com.gms.web.controller" />
+	<context:component-scan base-package="com.gms.web" />
+	<!-- com.gms.web.controller 이렇게 controller 써있으면 제약걸리는 것-->
+	<!-- 리턴타입:bean -->
 </beans>
