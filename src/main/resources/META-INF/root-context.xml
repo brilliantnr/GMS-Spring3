@@ -43,4 +43,23 @@
 	<context:component-scan base-package="com.gms.web" />
 	<!-- com.gms.web.controller 이렇게 controller 써있으면 제약걸리는 것-->
 	<!-- 리턴타입:bean -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://localhost:3306/mariadb" />
+		<property name="username" value="mariadb" />
+		<property name="password" value="mariadb" />
+	</bean>
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+

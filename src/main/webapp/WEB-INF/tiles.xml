@@ -12,7 +12,7 @@
 	<definition name="public:*/*.tiles" extends="public">
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
-	
+		
 	<definition name="auth:*/*.tiles" extends="public">
 		<put-attribute name="header" value=""/>
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
