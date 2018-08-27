@@ -42,6 +42,7 @@
 </bean>
 	<context:component-scan base-package="com.gms.web" />
 	<!-- com.gms.web.controller 이렇게 controller 써있으면 제약걸리는 것-->
+	<!-- base-package="com.gms.web.controller 로 되면 controller 폴더만 허용해놨으니, MemberController는 만들어지는데 MemberDTO는 못만들고 에러난다. -->
 	<!-- 리턴타입:bean -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
