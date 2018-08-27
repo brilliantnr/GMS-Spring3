@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<mappers>
+		<mapper resource="com/gms/web/mapper/MemberMapper.xml" />
+		<!-- mapper가 객체이니까 폴더로 만드는 것(/로 주소 연결되는 건 확장자 .xml). spring은 bean이니까 package로 만들었음-->
+	</mappers>
+</configuration>
