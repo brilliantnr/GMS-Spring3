@@ -4,7 +4,7 @@
 <div id="contentBox">
 	<form id="delete_form" name="delete">
 		비밀번호 확인<br>
-		<input type="password" name="pass" id="pass" /><br /> <input
+		<input type="password" name="password" id="password" /><br /> <input
 			id="delete_btn" type="button" value="회원탈퇴 요청" />
 	</form>
 </div>

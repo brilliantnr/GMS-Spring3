@@ -9,7 +9,7 @@
 			<option value="search_option">검색조건</option>
 			<option value="userid">아이디</option>
 			<option value="name">이름</option>
-			<option value="teamname">팀명</option>
+			<option value="teamId">팀명</option>
 		</select>
 	</div>
 	<table id="content_box_table">

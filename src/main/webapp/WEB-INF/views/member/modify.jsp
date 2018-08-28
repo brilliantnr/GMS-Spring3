@@ -13,7 +13,7 @@
 		</tr>
 		<tr>
 			<td>비밀번호</td>
-			<td> <input type="text" name="update_pw" placeholder="${user.password}" /><br /></td>
+			<td> <input type="text" name="password" placeholder="${user.password}" /><br /></td>
 		</tr>
 		<tr>
 			<td>주민번호</td>

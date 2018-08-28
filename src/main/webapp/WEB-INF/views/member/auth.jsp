@@ -9,7 +9,7 @@
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="index.html">Home</a></li>
-			          <li><a id="logout_btn" href="#">로그아웃</a></li>
+			          <li><a id="logout_btn" href="#">${user.name}님 로그아웃</a></li>
 			          <li><a id="" href="#">뿅</a></li>
 			          <li><a href="portfolio.html">Portfolio</a></li>
 			          <li><a href="price.html">Pricing</a></li>

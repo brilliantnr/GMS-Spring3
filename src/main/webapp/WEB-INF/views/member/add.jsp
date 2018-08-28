@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="contentBox">
 	<div id="join_div">
-		<form id="join_form" name="joinForm">
+		<form id="join_form" name="join_form">
 		<h2>회원가입</h2>
-			ID 			<br><input type="text" name="userid" /><br /> 
-			이름 		<br><input type="text" name="name" /><br />
-			생년월일	 	<br><input type="text" name="ssn" /><br /> 
-			비밀번호	 	<br><input type="text" name="password" /><br /> 
+			ID 			<br><input type="text" name="userid" required="required" /><br /> 
+			이름 		<br><input type="text" name="name" required/><br />
+			생년월일	 	<br><input type="text" name="ssn" required/><br /> 
+			비밀번호	 	<br><input type="text" name="password" required/><br /> 
 
 			<br /> <br /> 
 		<h4>소속팀</h4>
@@ -35,17 +35,18 @@
 			<input type="checkbox" name="subject" value="html" /> HTML
 			<input type="checkbox" name="subject" value="spring" /> Spring
 			<br />
-			<input id="join_submit" type="button" value="회원가입 " />  
+			<button id="join_submit" >회원가입</button> 
 			<br /> 
 		</form>
 	</div>
 </div> <!-- content -->
 	<script>
 	
-
+/* 
 	document.getElementById('join_form_btn').addEventListener('click',function(){
 		var form = document.getElementById('join_form');
 		var x = service.nullChecker([ form.userid.value, form.name.value, form.ssn.value, form.password.value ]); //x에 json 담김
+		
 		if(x.checker){  //j.checker가 true 일때 실행됨.
 			form.action = "${context}/member.do";  
 			form.method = "post";
@@ -72,5 +73,5 @@
 		}
 	});
 	//document.form.user_id.value 으로 document 이용하려면 form에 name 부여해야함.
-	
+	 */
 	</script>

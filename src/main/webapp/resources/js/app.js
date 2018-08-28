@@ -1,7 +1,4 @@
 "use strict";
-/* 엄격한 문법을 적용하시오
-틀리면 에러 처리 하라는 명령어
-*/
 
 //Ecma6버전 (객체리터럴)   (이전버전: IIFE패턴)
 var app = app || {}; //만약 app이 있으면 app쓰고 없으면 새로 만들어라, var는  전역
@@ -21,11 +18,28 @@ app = {//안드로이드, 노드의 핵심 코딩
 				location.href = app.x()+'/move/auth/member/add';
 			});
 			$('#login_submit').click(()=>{
-				location.href = app.x()+'/member/login';
+				$('#login_form')
+				.attr({
+					action:app.x()+"/member/login",
+					method:"POST"
+				})
+				.submit();
 			});
 			$('#join_submit').click(()=>{
-				location.href = app.x();
+				alert('join_submit click !');
+				/*DOM 객체 이용
+				 * var form = document.getElementById('join_form');
+					form.action = app.x()+"/member/add";  
+					form.method = "post";
+					form.submit();*/
+				$('#join_form')
+				.attr({
+					action:app.x()+"/member/add",
+					method:"POST"
+				})
+				.submit();
 			});
+			
 			$('#logout_btn').click(()=>{
 				location.href = app.x()+'/member/logout';
 			});
