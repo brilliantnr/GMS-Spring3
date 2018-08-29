@@ -40,38 +40,3 @@
 		</form>
 	</div>
 </div> <!-- content -->
-	<script>
-	
-/* 
-	document.getElementById('join_form_btn').addEventListener('click',function(){
-		var form = document.getElementById('join_form');
-		var x = service.nullChecker([ form.userid.value, form.name.value, form.ssn.value, form.password.value ]); //x에 json 담김
-		
-		if(x.checker){  //j.checker가 true 일때 실행됨.
-			form.action = "${context}/member.do";  
-			form.method = "post";
-			member.join([ form.userid.value, form.name.value, form.ssn.value, form.password.value ]);
-				
-		//6단계)OOP loop (input hidden 삭제)
- 		var arr = [
- 			{'name':'action', 'value':'join'}, 
-			{'name':'page', 'value':'mypage'},
-			{'name':'gender', 'value': member.getGender()},
-			{'name':'age','value': member.getAge()}
-			];
-			for(var i in arr){
-				var node = document.createElement('input'); 
-				node.setAttribute('type','hidden');
-				node.setAttribute('name', arr[i].name);
-				node.setAttribute('value', arr[i].value);
-				form.appendChild(node);
-			}
-		
-			form.submit();
-		}else {			//j.checker가 false면 text('필수항목 입력바랍니다') 보여라
-			alert(x.text);
-		}
-	});
-	//document.form.user_id.value 으로 document 이용하려면 form에 name 부여해야함.
-	 */
-	</script>

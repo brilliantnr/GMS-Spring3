@@ -22,7 +22,8 @@ public class MemberController {
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public String add(Model model,@ModelAttribute("member") MemberDTO member) {
 		logger.info("---add() :: {}---","ENTER");
-		System.out.println("name is "+member.getName());
+		logger.info("---add() :member: {}---",member);
+		memberService.add(member);
 		return "join_success";
 	}
 	@RequestMapping("/list")
@@ -32,7 +33,10 @@ public class MemberController {
 		
 	}
 	@RequestMapping("/retrieve")
-	public void retrieve() {}
+	public void retrieve(Model model, @ModelAttribute MemberDTO member) {
+		logger.info("---retrieve() :: {}---", "ENTER");
+		model.addAttribute("user",memberService.retrieve(member));
+	}
 	@RequestMapping("/count")
 	public void count() {}
 	@RequestMapping("/modify")
@@ -46,7 +50,6 @@ public class MemberController {
 	public String login(Model model, @ModelAttribute MemberDTO member) {
 		//@ModelAttribute MemberDTO member은 receiver.cmd 와 같다. request의 모든값 담겨있음
 		//@ModelAttribute는 커맨드 패턴의 carrier
-		//carrier 와 여기의 
 		logger.info("---login() :: {}---", "ENTER");
 		if(memberService.login(member)) { //true
 			member = memberService.retrieve(member);  

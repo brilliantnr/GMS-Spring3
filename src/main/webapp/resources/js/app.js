@@ -11,11 +11,9 @@ app = {//안드로이드, 노드의 핵심 코딩
 		onCreate : ()=>{
 			console.log('step 3 : ');
 			app.setContentView();
+			//---login page---
 			$('#login_btn').click(()=>{
 				location.href = app.x()+'/move/auth/member/login';
-			});
-			$('#join_btn').click(()=>{
-				location.href = app.x()+'/move/auth/member/add';
 			});
 			$('#login_submit').click(()=>{
 				$('#login_form')
@@ -24,6 +22,11 @@ app = {//안드로이드, 노드의 핵심 코딩
 					method:"POST"
 				})
 				.submit();
+			});
+			
+			//---join page---
+			$('#join_btn').click(()=>{
+				location.href = app.x()+'/move/auth/member/add';
 			});
 			$('#join_submit').click(()=>{
 				alert('join_submit click !');
@@ -38,6 +41,20 @@ app = {//안드로이드, 노드의 핵심 코딩
 					method:"POST"
 				})
 				.submit();
+			});
+			
+			//---retrieve page---
+			$('#mypage_update').click(()=>{
+				alert('mypage_update click !');
+				location.href = app.x()+'/move/auth/member/modify';
+				$('#update_form').attr({
+					action:app.x()+"/member/retrieve",
+					method:"POST"
+				}).submit();
+			});
+			$('#mypage_delete').click(()=>{
+				alert('mypage_delete click !');
+				location.href = app.x()+'/move/auth/member/remove';
 			});
 			
 			$('#logout_btn').click(()=>{
@@ -78,6 +95,7 @@ app.i= ()=>{
 	return app.session.path('img');
 };
 
+var user = user || {};
 
 
 

@@ -23,6 +23,9 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void add(MemberDTO p) {
 		logger.info("---add() :p: {}---", p);
+		
+		
+		
 		memberDAO.insert(p);
 	}
 

@@ -32,7 +32,7 @@
 				<tr>
 					<td>팀명 (현재: ${user.teamId})</td>
 					<td colspan="2">
-					<select name="teamid" id="teamid">
+					<select name="teamId" id="teamId">
 							<option value="A">놀자</option>
 							<option value="H">지은집</option>
 							<option value="S">터틀킹</option>
@@ -52,7 +52,7 @@
 					</td>
 				</tr>
 			</table>
-			<input type="hidden" name="page" value="mypage" />
+		<input type="hidden" name="page" value="mypage" />
 		<input type="hidden" name="action" value="update"/>	
 		<input id="update_submit" type="button" value="회원정보 수정완료" /> 
 	</form>
@@ -69,7 +69,7 @@
 
 	<script>
 	var form = document.getElementById('update_form');
-	var team = document.getElementById('teamid');
+	var team = document.getElementById('teamId');
 	var roll = document.getElementById('roll');
 	for(var i=0; i<team.options.length;i++){
 		//alert('---'+team.options[i].value+'와 같다!');		

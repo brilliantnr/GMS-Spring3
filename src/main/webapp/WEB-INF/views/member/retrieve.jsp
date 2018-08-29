@@ -40,33 +40,12 @@
 			<td></td>
 		</tr>
 	</table>
+	<button id="mypage_update">수정하기</button>
+	<button id="mypage_delete">회원탈퇴</button>
+		<!-- <input id="mypage_update" value="수정하기" >
 		<a id="mypage_update"> 수정하기 </a>
-		<a id="mypage_delete"> 회원탈퇴하기 </a>
+		<a id="mypage_delete"> 회원탈퇴하기 </a> -->
 </div><!-- content -->
-
-	<script>
-		//session 있음으로서 request.getParameter()쓸 필요없다.
-		//톰켓이 가지고 있는 reqeust. 이런 것들은 서블릿또는 JSP에서 이루어져야함
-		//update - 비번, 팀명, 팀롤
-		//업데이트 버튼 - 수정하기
-		document.getElementById('mypage_update').addEventListener('click',
-				function() {
-					router.move({
-						context : '${context}',
-						domain : 'member',
-						action : 'move',
-						page : 'modify'
-					});
-				});
-		
-		document.getElementById('mypage_delete').addEventListener('click',function(){
-			router.move({context:'${context}',
-				domain:'member',
-				action:'move',
-				page:'remove'});
-		});
-		
-		
-	</script>
+	
 </body>
 </html>
