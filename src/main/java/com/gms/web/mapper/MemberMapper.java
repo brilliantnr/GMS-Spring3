@@ -16,10 +16,8 @@ import com.gms.web.repository.MemberDAO;
 @Repository
 public class MemberMapper implements MemberDAO{
 	static final Logger logger = LoggerFactory.getLogger(MemberMapper.class);
-	
 	@Autowired SqlSessionFactory factory;
-	private static final String ns = "com.gms.web.mapper.MemberMapper";
-	//.xml의 mapper를 ns로 줌
+	private static final String ns = "com.gms.web.mapper.MemberMapper";//.xml의 mapper를 ns로 줌
 	
 	@Override
 	public void insert(MemberDTO p) {

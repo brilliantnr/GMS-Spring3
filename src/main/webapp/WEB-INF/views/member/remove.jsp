@@ -10,7 +10,6 @@
 </div>
 <!-- content End-->
 <script>
-
 	document.getElementById('delete_btn').addEventListener('click', function() { //콜백펑션내 : 메소드
 		var form = document.getElementById('delete_form'); // form 객체
 		var pass = form.pass.value;
@@ -32,5 +31,3 @@
 	})
 
 </script>
-</body>
-</html>
